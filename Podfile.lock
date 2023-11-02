@@ -1,0 +1,57 @@
+PODS:
+  - Alamofire (5.7.1)
+  - Cleanse (4.2.6)
+  - IQKeyboardManagerSwift (6.5.12)
+  - Localize (2.3.0)
+  - MBProgressHUD (1.2.0)
+  - R.swift (7.3.2)
+  - RxAlamofire (6.1.1):
+    - RxAlamofire/Core (= 6.1.1)
+  - RxAlamofire/Core (6.1.1):
+    - Alamofire (~> 5.4)
+    - RxSwift (~> 6.0)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+
+DEPENDENCIES:
+  - Cleanse (~> 4.2.6)
+  - IQKeyboardManagerSwift (~> 6.5.12)
+  - Localize (~> 2.3.0)
+  - MBProgressHUD (~> 1.2.0)
+  - R.swift (~> 7.3.2)
+  - RxAlamofire (~> 6.1.1)
+  - RxCocoa (~> 6.5.0)
+  - RxSwift (~> 6.5.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Cleanse
+    - IQKeyboardManagerSwift
+    - Localize
+    - MBProgressHUD
+    - R.swift
+    - RxAlamofire
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+
+SPEC CHECKSUMS:
+  Alamofire: 0123a34370cb170936ae79a8df46cc62b2edeb88
+  Cleanse: 6bfc62033dcc0e5ba7992f410a5352ddd1283551
+  IQKeyboardManagerSwift: 371b08cb39664fb56030f5345c815a4ffc74bbc0
+  Localize: cb1ae53ed73decaad0dce217806ed983091913f5
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  R.swift: 0af0d882f49f03711415cb4e5215daa977d8a480
+  RxAlamofire: beb75a1c452d0de225651db4903f5d29d034a620
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+
+PODFILE CHECKSUM: d7458220bb4e3fdaded03065382ce15ac275f481
+
+COCOAPODS: 1.12.1
