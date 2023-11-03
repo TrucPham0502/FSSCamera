@@ -33,7 +33,7 @@ class WrapperSubject<Element>: ObservableType, ObserverType {
     func on(_ event: Event<Element >) { fatalError() }
 }
 @propertyWrapper
-class  BehaviorRelayProperty<Element> {
+class  BehaviorRelayProperty<Element> : WrapperSubject<Element> {
     var wrappedValue: Element {
         didSet {
             subject.onNext(wrappedValue)
@@ -48,28 +48,28 @@ class  BehaviorRelayProperty<Element> {
     
     
     
-    var projectedValue: BehaviorSubject<Element> {
-        return subject
+    var projectedValue: WrapperSubject<Element> {
+        return self
     }
     
     
     
-//    override func subscribe<Observer>(_ observer: Observer) -> Disposable where Observer : ObserverType, Element == Observer.Element {
-//        return subject.subscribe(observer)
-//    }
-//    
-//    override func on(_ event: Event<Element>) {
-//        switch event {
-//        case .next(let element):
-//            wrappedValue = element
-//        default:
-//            break
-//        }
-//    }
+    override func subscribe<Observer>(_ observer: Observer) -> Disposable where Observer : ObserverType, Element == Observer.Element {
+        return subject.subscribe(observer)
+    }
+    
+    override func on(_ event: Event<Element>) {
+        switch event {
+        case .next(let element):
+            wrappedValue = element
+        default:
+            break
+        }
+    }
 }
 
 @propertyWrapper
-class  PublishRelayProperty<Element> {
+class  PublishRelayProperty<Element> : WrapperSubject<Element?> {
     var wrappedValue: Element? {
         didSet {
             guard let wrappedValue = wrappedValue else { return }
@@ -78,28 +78,30 @@ class  PublishRelayProperty<Element> {
     }
     
     private let subject: PublishSubject<Element?>
-    init() {
+    override init() {
         self.subject = PublishSubject<Element?>()
+        super.init()
     }
     
-    var projectedValue: PublishSubject<Element?> {
-        return subject
+    var projectedValue: WrapperSubject<Element?> {
+        return self
     }
     
     
     
-//    override func subscribe<Observer>(_ observer: Observer) -> Disposable where Observer : ObserverType, Element == Observer.Element {
-//        return subject.subscribe(observer)
-//    }
-//
-//    override func on(_ event: Event<Element>) {
-//        switch event {
-//        case .next(let element):
-//            wrappedValue = element
-//        default:
-//            break
-//        }
-//    }
+    override func subscribe<Observer>(_ observer: Observer) -> Disposable where Element? == Observer.Element, Observer : ObserverType {
+        return subject.subscribe(observer)
+    }
+
+    override func on(_ event: Event<Element?>) {
+        switch event {
+        case .next(let element):
+            wrappedValue = element
+        default:
+            break
+        }
+    }
+    
 }
 
 

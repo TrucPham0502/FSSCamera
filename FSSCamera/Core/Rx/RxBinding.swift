@@ -56,54 +56,46 @@ func <-> <T>(property: ControlProperty<T>, variable: WrapperSubject<T>) -> Dispo
     return Disposables.create(bindToUIDisposable, bindToVariable)
 }
 
-func <-> <T>(subject: PublishSubject<T>, variable: BehaviorRelay<T>) -> Disposable {
-    let bindToUIDisposable = variable.asObservable()
-        .bind(to: subject)
+func >> <T>(subject: PublishSubject<T>, variable: BehaviorRelay<T>) -> Disposable {
     let bindToVariable = subject
         .subscribe(onNext: { n in
             variable.accept(n)
-        }, onCompleted:  {
-            bindToUIDisposable.dispose()
         })
     
-    return Disposables.create(bindToUIDisposable, bindToVariable)
+    return bindToVariable
 }
 
-func <-> <T >(subject: PublishSubject<T?>, variable: BehaviorRelay<T?>) -> Disposable {
-    let bindToUIDisposable = variable.asObservable()
-        .bind(to: subject)
-    let bindToVariable = subject
-        .subscribe(onNext: { n in
-            variable.accept(n)
-        }, onCompleted:  {
-            bindToUIDisposable.dispose()
-        })
-
-    return Disposables.create(bindToUIDisposable, bindToVariable)
-}
-func <-> <T>(subject: PublishSubject<T?>, variable: PublishSubject<T?>) -> Disposable {
-    let bindToUIDisposable = variable.asObservable()
-        .bind(to: subject)
+func >> <T >(subject: BehaviorRelay<T?>, variable: PublishSubject<T?>) -> Disposable {
     let bindToVariable = subject
         .subscribe(onNext: { n in
             variable.onNext(n)
-        }, onCompleted:  {
-            bindToUIDisposable.dispose()
         })
 
-    return Disposables.create(bindToUIDisposable, bindToVariable)
+    return bindToVariable
 }
-func <-> <T >(subject: BehaviorRelay<T>, variable: BehaviorRelay<T>) -> Disposable {
-    let bindToUIDisposable = variable.asObservable()
-        .bind(to: subject)
+func >> <T>(subject: WrapperSubject<T?>, variable: WrapperSubject<T?>) -> Disposable {
+    let bindToVariable = subject
+        .subscribe(onNext: { n in
+            variable.on(.next(n))
+        })
+
+    return bindToVariable
+}
+func >> <T >(subject: WrapperSubject<T>, variable: BehaviorRelay<T>) -> Disposable {
     let bindToVariable = subject
         .subscribe(onNext: { n in
             variable.accept(n)
-        }, onCompleted:  {
-            bindToUIDisposable.dispose()
         })
 
-    return Disposables.create(bindToUIDisposable, bindToVariable)
+    return bindToVariable
+}
+func >> <T >(subject: WrapperSubject<T>, variable: PublishSubject<T>) -> Disposable {
+    let bindToVariable = subject
+        .subscribe(onNext: { n in
+            variable.onNext(n)
+        })
+
+    return bindToVariable
 }
 
 

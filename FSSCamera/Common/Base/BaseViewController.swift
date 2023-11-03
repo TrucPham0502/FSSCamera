@@ -63,12 +63,7 @@ class BaseViewController<VM : ViewModelType> : AppBaseViewController {
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
-    @objc private func playerLoading(_ sender : Notification) {
-        if let isloading = sender.object as? Bool {
-            self.showLoading(withStatus: isloading, message: "Fetching video data")
-        }
-    }
-    
+
     deinit {
         NotificationCenter.default.removeObserver(self)
     }

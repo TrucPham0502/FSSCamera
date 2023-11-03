@@ -20,23 +20,20 @@ class LiveViewModel : BaseViewModel<LiveViewModel.Input, LiveViewModel.Output> {
     struct Input {
         let serial : String
         let viewDidLoad : Driver<Void>
-        let data: PublishSubject<CameraInfo?>
+        let data: WrapperSubject<CameraInfo?>
     }
     struct Output {
         let cameraInfo : Driver<CameraInfo?>
     }
     
-    @PublishRelayProperty
-    var cameraInfo : CameraInfo? {
-        didSet {
-            print(cameraInfo)
-        }
-    }
+    @BehaviorRelayProperty(value: nil)
+    var cameraInfo : CameraInfo?
     
     
     
     override func transform(input: Input) -> Output {
-        ($cameraInfo <-> input.data).disposed(by: disposeBag)
+  
+        ($cameraInfo >> input.data).disposed(by: disposeBag)
         input.viewDidLoad.flatMap{[unowned self] () -> Driver<CameraInfo> in
             return Observable.deferred {() -> Observable<CameraInfo> in
                 return self.service.getCameraInfo(.init(serialList: [input.serial], appVersion: self.appversion, deviceName: UIDevice.modelNameIdentifier, mode: .single))
@@ -44,7 +41,7 @@ class LiveViewModel : BaseViewModel<LiveViewModel.Input, LiveViewModel.Output> {
                 .trackActivity(activityIndicator)
                 .asDriverOnErrorJustComplete()
         }.drive($cameraInfo).disposed(by: self.disposeBag)
-        
+
         return .init(cameraInfo: $cameraInfo.asDriverOnErrorJustComplete())
     }
     

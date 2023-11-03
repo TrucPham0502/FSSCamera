@@ -19,6 +19,8 @@ class LiveViewController : BaseViewController<LiveViewModel> {
         self.publicKey = key.get()
         super.init(vm: vm)
     }
+    @PublishRelayProperty
+    var data : CameraInfo?
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -56,7 +58,7 @@ class LiveViewController : BaseViewController<LiveViewModel> {
     
     override func performBinding() {
         super.performBinding()
-        let out = viewModel.transform(input: .init(serial: serial, viewDidLoad: self.rx.viewDidLoad.mapToVoid().asDriverOnErrorJustComplete(), data: .init()))
+        let out = viewModel.transform(input: .init(serial: serial, viewDidLoad: self.rx.viewDidLoad.mapToVoid().asDriverOnErrorJustComplete(), data: $data))
         
         out.cameraInfo.drive(onNext: {[weak self] data in
             print(data)
