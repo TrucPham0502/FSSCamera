@@ -9,6 +9,11 @@ import Foundation
 import RxSwift
 import RxCocoa
 import Cleanse
+extension LiveViewController : Themable {
+    func applyTheme(_ theme: MyTheme) {
+        self.view.backgroundColor = theme.settings.color.colorBlack
+    }
+}
 
 class LiveViewController : BaseViewController<LiveViewModel> {
     var channelActiveIndex = -1
@@ -35,6 +40,7 @@ class LiveViewController : BaseViewController<LiveViewModel> {
     
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.view.backgroundColor = R.color.onBackground()
         let image : UIImage? = R.image.avatar()
@@ -48,6 +54,11 @@ class LiveViewController : BaseViewController<LiveViewModel> {
         print("hello".localized)
         (UIApplication.shared.delegate as! AppDelegate).setLanguage(language: .en)
        
+        ThemeManager.shared.register(self)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            ThemeManager.shared.theme = .dark
+        }
         
     }
     

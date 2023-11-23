@@ -10,6 +10,8 @@
 		087D0C7AEA228C4CC65721F9 /* Pods_FSSCameraTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C50ECD5391C4FD53F16288 /* Pods_FSSCameraTests.framework */; };
 		5AC383B7A4C93689D59BC17B /* Pods_FSSCamera.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A6D2350FE2F1903B33AC02C /* Pods_FSSCamera.framework */; };
 		8035331D2CB18CF52788DAB8 /* Pods_FSSCamera_FSSCameraUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 668C9C70D361235D7F47624A /* Pods_FSSCamera_FSSCameraUITests.framework */; };
+		8EF3958E2B0EEAC3002FA20F /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3958D2B0EEAC3002FA20F /* ThemeManager.swift */; };
+		8EF395932B0F4B2E002FA20F /* MyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF395922B0F4B2E002FA20F /* MyTheme.swift */; };
 		FE342A7A2A8E562A005C2878 /* libFSCalendar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7F16B02A88D44400592906 /* libFSCalendar.a */; };
 		FE342A7D2A8E5744005C2878 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7F17152A88E63B00592906 /* CFNetwork.framework */; };
 		FE342A7E2A8E574F005C2878 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE7F17342A88E76D00592906 /* UIKit.framework */; };
@@ -65,8 +67,8 @@
 		FE7B2EA32A8A87DC00C4E2A0 /* RxBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B2EA22A8A87DC00C4E2A0 /* RxBinding.swift */; };
 		FE7B2EA62A8A8A4F00C4E2A0 /* AppBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B2EA52A8A8A4F00C4E2A0 /* AppBaseViewController.swift */; };
 		FE7B2EA82A8A8BC400C4E2A0 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B2EA72A8A8BC400C4E2A0 /* UIViewController+Extensions.swift */; };
-		FE7B2EAA2A8A8CAB00C4E2A0 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B2EA92A8A8CAB00C4E2A0 /* BaseViewModel.swift */; };
-		FE7B2EAD2A8A8E3800C4E2A0 /* AppBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B2EAC2A8A8E3800C4E2A0 /* AppBaseViewModel.swift */; };
+		FE7B2EAA2A8A8CAB00C4E2A0 /* AppBaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B2EA92A8A8CAB00C4E2A0 /* AppBaseViewModel.swift */; };
+		FE7B2EAD2A8A8E3800C4E2A0 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B2EAC2A8A8E3800C4E2A0 /* BaseViewModel.swift */; };
 		FE7B2EAF2A8A8E6400C4E2A0 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B2EAE2A8A8E6400C4E2A0 /* BaseViewController.swift */; };
 		FE7B2EB22A8BB1C500C4E2A0 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B2EB12A8BB1C400C4E2A0 /* SplashViewModel.swift */; };
 		FE7B2EB42A8BB20400C4E2A0 /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE7B2EB32A8BB20400C4E2A0 /* LiveViewController.swift */; };
@@ -234,6 +236,8 @@
 		6F8245937139323B7B6D0658 /* Pods-FSSCamera.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSSCamera.release.xcconfig"; path = "Target Support Files/Pods-FSSCamera/Pods-FSSCamera.release.xcconfig"; sourceTree = "<group>"; };
 		73AF87F6B452A7D003DEFE40 /* Pods-FSSCamera-FSSCameraUITests.release-beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSSCamera-FSSCameraUITests.release-beta.xcconfig"; path = "Target Support Files/Pods-FSSCamera-FSSCameraUITests/Pods-FSSCamera-FSSCameraUITests.release-beta.xcconfig"; sourceTree = "<group>"; };
 		878D9381C5EB023B55FDBAB1 /* Pods-FSSCameraTests.release-beta.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSSCameraTests.release-beta.xcconfig"; path = "Target Support Files/Pods-FSSCameraTests/Pods-FSSCameraTests.release-beta.xcconfig"; sourceTree = "<group>"; };
+		8EF3958D2B0EEAC3002FA20F /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		8EF395922B0F4B2E002FA20F /* MyTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTheme.swift; sourceTree = "<group>"; };
 		92CC3E0724BAE09B33453CE2 /* Pods-FSSCamera.release-dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSSCamera.release-dev.xcconfig"; path = "Target Support Files/Pods-FSSCamera/Pods-FSSCamera.release-dev.xcconfig"; sourceTree = "<group>"; };
 		A17C9FFC696FDD4A54410A5C /* Pods-FSSCamera.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSSCamera.debug.xcconfig"; path = "Target Support Files/Pods-FSSCamera/Pods-FSSCamera.debug.xcconfig"; sourceTree = "<group>"; };
 		B97F7FFF4D4B224F0984EE03 /* Pods-FSSCamera-FSSCameraUITests.debug-dev.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FSSCamera-FSSCameraUITests.debug-dev.xcconfig"; path = "Target Support Files/Pods-FSSCamera-FSSCameraUITests/Pods-FSSCamera-FSSCameraUITests.debug-dev.xcconfig"; sourceTree = "<group>"; };
@@ -287,8 +291,8 @@
 		FE7B2EA22A8A87DC00C4E2A0 /* RxBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxBinding.swift; sourceTree = "<group>"; };
 		FE7B2EA52A8A8A4F00C4E2A0 /* AppBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBaseViewController.swift; sourceTree = "<group>"; };
 		FE7B2EA72A8A8BC400C4E2A0 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
-		FE7B2EA92A8A8CAB00C4E2A0 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
-		FE7B2EAC2A8A8E3800C4E2A0 /* AppBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBaseViewModel.swift; sourceTree = "<group>"; };
+		FE7B2EA92A8A8CAB00C4E2A0 /* AppBaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBaseViewModel.swift; sourceTree = "<group>"; };
+		FE7B2EAC2A8A8E3800C4E2A0 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 		FE7B2EAE2A8A8E6400C4E2A0 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FE7B2EB12A8BB1C400C4E2A0 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		FE7B2EB32A8BB20400C4E2A0 /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
@@ -714,6 +718,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8EF3958C2B0EE4F1002FA20F /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				8EF3958D2B0EEAC3002FA20F /* ThemeManager.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
+		8EF395912B0F4B1A002FA20F /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				8EF395922B0F4B2E002FA20F /* MyTheme.swift */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
 		8FDEDB4F897A2B983153CC04 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -866,7 +886,7 @@
 			isa = PBXGroup;
 			children = (
 				FE7B2EA52A8A8A4F00C4E2A0 /* AppBaseViewController.swift */,
-				FE7B2EA92A8A8CAB00C4E2A0 /* BaseViewModel.swift */,
+				FE7B2EA92A8A8CAB00C4E2A0 /* AppBaseViewModel.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -874,7 +894,7 @@
 		FE7B2EAB2A8A8E2500C4E2A0 /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				FE7B2EAC2A8A8E3800C4E2A0 /* AppBaseViewModel.swift */,
+				FE7B2EAC2A8A8E3800C4E2A0 /* BaseViewModel.swift */,
 				FE7B2EAE2A8A8E6400C4E2A0 /* BaseViewController.swift */,
 			);
 			path = Base;
@@ -1939,6 +1959,7 @@
 		FE7F177A2A892EFB00592906 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				8EF3958C2B0EE4F1002FA20F /* DesignSystem */,
 				FE7B2EA42A8A8A4000C4E2A0 /* Base */,
 				FE95CBA12A8A84A9001F9023 /* Rx */,
 				FE95CB9D2A8A8116001F9023 /* Extensions */,
@@ -1971,6 +1992,7 @@
 		FE7F177D2A892F3600592906 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8EF395912B0F4B1A002FA20F /* Themes */,
 				FE7B2EAB2A8A8E2500C4E2A0 /* Base */,
 				FE95CBA02A8A83D3001F9023 /* Services */,
 				FE7F178C2A89385900592906 /* Config */,
@@ -2350,17 +2372,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EF395932B0F4B2E002FA20F /* MyTheme.swift in Sources */,
 				FE4EA3D72A90ED7D008468B6 /* mask.m in Sources */,
 				FE7F16612A88D3B300592906 /* TalkBackControl.mm in Sources */,
 				FE7B2EB62A8BB21400C4E2A0 /* LiveViewModel.swift in Sources */,
 				FE7F167C2A88D3B300592906 /* RecordInfo.m in Sources */,
-				FE7B2EAD2A8A8E3800C4E2A0 /* AppBaseViewModel.swift in Sources */,
+				FE7B2EAD2A8A8E3800C4E2A0 /* BaseViewModel.swift in Sources */,
 				FE7F16402A88D3B300592906 /* AlarmManager.mm in Sources */,
 				FE7F16702A88D3B300592906 /* ObSysteminfo.m in Sources */,
 				FE7F16FB2A88D50400592906 /* ISCCameraDeviceManager.mm in Sources */,
 				FE95CB972A8A70BA001F9023 /* SplashViewController.swift in Sources */,
 				FE342ABE2A908E33005C2878 /* CoreDataEntityDescription.swift in Sources */,
-				FE7B2EAA2A8A8CAB00C4E2A0 /* BaseViewModel.swift in Sources */,
+				FE7B2EAA2A8A8CAB00C4E2A0 /* AppBaseViewModel.swift in Sources */,
 				FE7B2ECF2A8BD67D00C4E2A0 /* CryptorManager.swift in Sources */,
 				FE342AC12A908E33005C2878 /* CoreDataObject.swift in Sources */,
 				FE7F17862A89338600592906 /* APIServiceError.swift in Sources */,
@@ -2459,6 +2482,7 @@
 				FE7F16792A88D3B300592906 /* TimeInfo.m in Sources */,
 				FE7F16F82A88D50400592906 /* Storage.m in Sources */,
 				FE7F16FE2A88D50400592906 /* ISCCameraMediaControl.m in Sources */,
+				8EF3958E2B0EEAC3002FA20F /* ThemeManager.swift in Sources */,
 				FE7F16672A88D3B300592906 /* CameraConfigurationWatermark.mm in Sources */,
 				FE7F164F2A88D3B300592906 /* UIView+Layout.m in Sources */,
 				FE7F16522A88D3B300592906 /* JHRotatoUtil.m in Sources */,
